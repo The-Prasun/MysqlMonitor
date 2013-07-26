@@ -1,0 +1,26 @@
+<html>
+<body>
+  <table CELLPADDING=3 CELLSPACING=1 border=1>
+    <thead>
+      <tr>
+        <th>Database</th>
+        <th>Table</th>
+        <th>Previous Row Count</th>
+        <th>Current Row Count</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <% size_issues.each do |row| %>
+      <tr>
+        <td><%= row[:db_name] %></td>
+        <td style="text-align: center;"><%= row[:tbl_name] %></td>
+        <td style="text-align: center;"><%= row[:old_rows] %></td>
+        <td style="text-align: center;"><%= row[:cur_rows] %></td>
+      </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+</body>
+</html>
